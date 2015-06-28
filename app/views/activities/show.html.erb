@@ -8,7 +8,7 @@
 <p>Type: <%= @activity.activity_type %></p>
 
 <% if @activity.completed_at %>
-<p><strong>This activity was completed on <%= completed_at.to_date.to_s(:long) %>.</strong></p>
+<p><strong>This activity was completed on <%= @activity.completed_at.to_date.to_s(:long) %>.</strong></p>
 <% end %>
 
 <%= link_to 'Edit', edit_activity_path(@activity) %> |
