@@ -7,7 +7,7 @@
 <p>Location: <%= @activity.location %></p>
 <p>Type: <%= @activity.activity_type %></p>
 
-<% if completed_at %>
+<% if @activity.completed_at %>
 <p><strong>This activity was completed on <%= completed_at.to_date.to_s(:long) %>.</strong></p>
 <% end %>
 
