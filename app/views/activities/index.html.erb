@@ -5,7 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th colspan="4"></th>
+      <th colspan="5"></th>
     </tr>
   </thead>
 
@@ -13,6 +13,7 @@
     <% @activities.each do |activity| %>
       <tr>
         <td><%= activity.name %></td>
+        <td><%= activity.location %></td>
         <td><%= link_to 'Show', activity %></td>
         <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
         <td><%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
