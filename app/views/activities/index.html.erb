@@ -1,13 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <% if !@page_title %>
-  <h1>Listing Activities</h1>
+  <h1>Listing Open Activities</h1>
 <% else %>
   <h1><%= @page_title %></h1>
 <% end %>
 
 <br>
-<%= link_to 'See completed activities', completed_activities_path %>
+<% if request.path == activities_path %>
+  <%= link_to 'See completed activities', completed_activities_path %>
+<% else %>
+  <%= link_to 'See open activities', activities_path %>
+<% end %>
 
 <table>
   <thead>
